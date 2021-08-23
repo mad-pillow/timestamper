@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1230px;
+  width: 1230px;
+  height: 100%;
+}
+
+.shadow {
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  &__container {
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #003f5a;
+  }
+
+  &__logo-block {
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+
+.main {
+  &__container {
+    padding: 70px 20px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: beige;
+  }
+
+  &__control {
+    flex-basis: 30%;
+  }
+
+  &__view {
+    flex-basis: 65%;
+  }
+}
+.control {
+  &__btn {
+    display: inline-block;
+  }
+  &__step-list {
+    list-style: none;
+  }
+
+  &__step-item {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__step-block {
+    border-radius: 10px;
+    padding-bottom: 15px;
+  }
+
+  &__step-title {
+    background-color: #1f5673;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__step-content {
+    margin: 15px 0 0 30px;
+  }
+
+  &__size-list {
+    list-style: none;
+  }
+
+  &__size-item {
+    & + & {
+      margin-top: 5px;
+    }
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.datetime {
+  &__format-list {
+    list-style: none;
+  }
+
+  &__format-item {
+    margin-top: 3px;
+  }
+}
+
+#photos-input {
+  display: none;
+}
+
+#timestamp-input {
+}
+
+.view {
+  &__canvas-block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

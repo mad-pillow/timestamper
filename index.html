@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- !Styles connection -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- !Project name -->
+    <title></title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- !Header container -->
+      <header class="header">
+        <div class="header__container shadow">
+          <div class="header__logo-block">
+            <a href="#" class="header__logo-link">timestamper</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- !Main container -->
+      <main>
+        <div class="main__container">
+          <div class="main__control">
+            <ul class="control__step-list">
+              <li class="control__step-item">
+                <div class="control__step-block shadow">
+                  <h2 class="control__step-title">
+                    1. Choose one or more photos (*.jpg or *.png)
+                  </h2>
+                  <div class="control__step-content">
+                    <label class="control__btn btn" for="photos-input">
+                      Choose photos
+                      <input
+                        id="photos-input"
+                        name="photos"
+                        type="file"
+                        placeholder="Add photos"
+                        multiple
+                    /></label>
+                  </div>
+                </div>
+              </li>
+              <li class="control__step-item">
+                <div class="control__step-block shadow">
+                  <h2 class="control__step-title">2. Set date and time</h2>
+                  <div class="control__step-content">
+                    <input
+                      id="timestamp-input"
+                      name="time"
+                      type="datetime-local"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="control__step-item">
+                <div class="control__step-block shadow">
+                  <h2 class="control__step-title">
+                    3. Set date/time stamp format
+                  </h2>
+                  <div class="control__step-content">
+                    <ul class="datetime__format-list">
+                      <form class="datetime__format-list-form" action=""></form>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="control__step-item">
+                <div class="control__step-block shadow">
+                  <h2 class="control__step-title">
+                    4. Set modified picture size (to reduce filesize)
+                  </h2>
+                  <div class="control__step-content">
+                    <ul class="control__size-list">
+                      <li class="control__size-item">
+                        <label for="width-input">
+                          <input
+                            type="text"
+                            name="width"
+                            id="width-input"
+                            disabled
+                          />
+                          width in px
+                        </label>
+                      </li>
+                      <li class="control__size-item">
+                        <label for="height-input">
+                          <input
+                            type="text"
+                            name="height"
+                            id="height-input"
+                            disabled
+                          />
+                          height in px
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="control__step-item">
+                <div class="control__step-block shadow">
+                  <h2 class="control__step-title">5. Save pictures</h2>
+                  <div class="control__step-content">
+                    <button class="btn" id="save-btn">Save</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="main__view">
+            <div class="view__canvas-block shadow">
+              <canvas id="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- !Footer container -->
+    </div>
+
+    <!-- !Scripts connection -->
+    <script src="script.js"></script>
+  </body>
+</html>
